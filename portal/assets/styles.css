@@ -1,0 +1,25 @@
+body{
+    background-color: #0f121f;
+    background-image: url(galaxy.jpg);
+}
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+h1, h2, h3, h4, h5{
+    font-weight: normal;
+    color: #ccc;
+    margin: 0;
+}
+
+a:visited{
+    color: #f0ede0
+}
+a:hover{
+    color: #793
+}
+

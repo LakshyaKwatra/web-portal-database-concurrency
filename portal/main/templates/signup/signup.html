@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div align="center">
+      <link rel="stylesheet" href="{% static 'buttons.css' %}">
+<h2><strong>SIGN UP</strong></h2>
+  <form method="post">
+    {% csrf_token %}
+    {% for field in form %}
+      <p>
+        <strong>{{ field.label_tag }}</strong><br>
+        {{ field }}
+        {% for error in field.errors %}
+    <p style="color: red; list-style-type = none;"><small>{{ error }}</small></p>
+        {% endfor %}
+      </p>
+    {% endfor %}
+    <button type="submit" class = "example_b">Sign up</button><br><br>
+    <small style="color: grey; list-style-position: outside;">Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.
+<br>Your password can’t be too similar to your other personal information.
+<br>Your password must contain at least 8 characters.
+<br>Your password can’t be a commonly used password.
+<br>Your password can’t be entirely numeric.
+<br>Enter the same password as before, for verification.</small>
+
+
+  </form>
+</div>
+{% endblock %}

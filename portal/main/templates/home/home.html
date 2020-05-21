@@ -1,0 +1,72 @@
+{% load static %}
+
+<head>
+
+
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+
+li {
+  float: left;
+  border-right:1px solid #bbb;
+}
+
+
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+</style>
+</head>>
+<body>
+<ul>
+  <li><a class="active" href="/logout">Home</a></li>
+  <li><a href="/logout">News</a></li>
+  <li><a href="/logout">Contact</a></li>
+    <li style="float:right"><a href="/logout" target="blank">Log Out</a></li>
+  <li style="float:right"><a href="/logout">About</a></li>
+</ul>
+<html class = "wrapper">
+<br>
+<img src="{% static 'finallogo.svg' %}" alt="HTML5 Icon" style="width:100px;height:75px; width: 50% ;display: block;
+  margin-left: auto; margin-right: auto;">
+    <br><br>
+    <body class = "wrapper">
+
+<link rel="stylesheet" href="{% static 'styles.css' %}">
+<link rel="stylesheet" href="{% static 'buttons.css' %}">
+
+<h2 align="center">Welcome to the web portal, <i><strong style = "text-transform:capitalize; color: #fff">{{username}}!</strong></i></h2><br>
+    <div class="container">
+
+        <div align = "center">
+            <br><a href="/logout" target="blank" class = "example_b">Link ONE</a></div><div align="center">
+        <br><a href="/logout" target="blank" class = "example_b">Link TWO</a></div><div align="center">
+        <br><a href="/logout" target="blank" class = "example_b">Link THREE</a></div><div align="center">
+        <br><a href="/logout" target="blank" class = "example_b">Link FOUR</a></div>
+
+
+    </div>
+
+    </body>
+</html>

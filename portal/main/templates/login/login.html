@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div align="center">
+    <link rel="stylesheet" href="{% static 'buttons.css' %}">
+<h2><strong>SIGN IN</strong></h2>
+    <div class="container">
+        <form method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+            <button type="submit" class = "example_b">Login</button>
+        </form>
+        <br>
+        Don't have an account? <a href="/signup" target="blank"><strong>Register here</strong></a>!
+    </div>
+</div>
+{% endblock %}

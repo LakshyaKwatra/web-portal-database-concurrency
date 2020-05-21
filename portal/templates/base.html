@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+<meta charset="UTF-8">
+<title>SAMSUNG</title>
+
+</head>
+<body>
+<header class = "wrapper">
+<img src="{% static 'finallogo.svg' %}" alt="HTML5 Icon" style="width:240px;height:180px; width: 50% ;display: block;
+  margin-left: auto; margin-right: auto;">
+    <br><br>
+    <div class = "wrapper">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>
